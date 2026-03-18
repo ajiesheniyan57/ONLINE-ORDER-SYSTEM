@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import StudentApp from './pages/Student/StudentApp';
 import OwnerApp from './pages/Owner/OwnerApp';
 import { ChevronRight, Settings } from 'lucide-react';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-bg-dark text-text-main flex flex-col font-sans overflow-x-hidden">
         <Routes>
           <Route path="/" element={
@@ -44,7 +44,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
